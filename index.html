@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Vulnerability Scanning</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>Intro To Vulnerability Scanning</h1><h2>by Jarrod Rizor</h2></section>
+				<section><h2>What is Vulnerability Scanning?</h2><p>Vulnerability scanning is an inspection of the potential points of exploit on a computer or network to identify security holes. </p></section>
+				<section><h2>In Comes Nessus</h2></section>
+				<section><h2>What is Nessus?</h2><p>Nessus is a proprietary vulnerability scanner developed by Tenable, Inc. (NASDAQ: TENB) </p></section>
+				<section><h2>The Nessus Family.</h2><p>Nessus Essentials, Nessus Professional, Tenable.io <a href="https://www.tenable.com/products/nessus" target="_blank">Nessus Products</a></p></section>
+				<section data-background="images/Nessus_family.png" data-background-size="contain"></section>
+				<section><h2>Other Scanners</h2><p>OpenVAS and Nexpose</p></section>
+				<section data-background="images/rapid7.png" data-background-size="contain"></section>
+				<section data-background="images/Openvas.png" data-background-size="contain"></section>
+				<section><h2>Setup Nessus Essentials</h2></section>
+				<section><p>Navigating to <a href=" https://www.tenable.com/products/nessus/nessus-essentials">Nessus Register, we can register for an account</a></p><img src="images/Nessus_Activation.png"></section>
+				<section><p>We will then download the Nessus-#.##.#-debian6_amd64.deb file.</p><p>Then run the command sudo dpkg -i package_file.deb</p><img src="images/Nessus_install.png"></section>
+				<section><p>Start Nessus by running sudo /bin/systemctl start nessusd.service. Then Navigate to <a href="https://localhost:8834">https://localhost:8834</a></p></section>
+				<section data-background="images/Nessus_Homepage.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Scantemplates.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Metaspoitable_NewScan.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Scanning.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_CompletedScan.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Scanoverview.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Vulnerablities.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Vulnerablities2.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_VNC.png" data-background-size="contain"></section>
+				<section>
+					<h2>CVSS vs CVE</h2>
+					<p>CVSS is the overall score assigned to a vulnerability. 
+					CVE is simply a list of all publicly disclosed vulnerabilities that includes the CVE ID, a description, dates, and comments. 
+					The CVSS score is not reported in the CVE listing – you must use the NVD to find assigned CVSS scores.</p>
+				</section>
+				<section data-background="images/Nessus_Remediations.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Report.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_HTML_report.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_exe_report.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_Finish.png" data-background-size="contain"></section>
+				<section><h2>ZAP / OWASP</h2></h2></section>
+				<section><h2>Who is OWASP?</h2>
+					<p>The Open Web Application Security Project® (OWASP) is a nonprofit
+					foundation that works to improve the security of software. Through
+					community-led open-source software projects, hundreds of local
+					chapters worldwide, tens of thousands of members, and leading educational
+					and training conferences, the OWASP Foundation is the source for
+					developers and technologists to secure the web. <a href="https://owasp.org/">OWASP Site</a></p>
+				</section>
+				<section data-background="images/OWASP_Mainpage.png" data-background-size="contain"></section>
+				<section><h2>OWASP Top 10</h2>
+					<p>The OWASP Top 10 is a standard awareness document for developers and web
+					application security. It represents a broad consensus about the most critical
+					security risks to web applications. <a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></p>
+				</section>
+				<section>
+					<h2>OWASP Top 10</h2>
+				</section>
+				<section>
+					<h4>A1:2017-Injection</h4> 
+					<p>Injection flaws, such as SQL, NoSQL, OS, and LDAP injection, occur when untrusted data is sent 
+					to an interpreter as part of a command or query. The attacker’s hostile data can trick the 
+					interpreter into executing unintended commands or accessing data without proper authorization.</p>
+				</section>
+				<section>
+					<h4>A2:2017-Broken Authentication</h4> 
+					<p>Application functions related to authentication and session management are often implemented incorrectly, 
+						allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation 
+						flaws to assume other users’ identities temporarily or permanently.</p>
+				</section>
+				<section>
+					<h4>A3:2017-Sensitive Data Exposure</h4> 
+					<p>Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and 
+						PII. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, 
+						or other crimes. Sensitive data may be compromised without extra protection, such as encryption at rest or 
+						in transit, and requires special precautions when exchanged with the browser.</p>
+				</section>
+				<section>
+					<h4>A4:2017-XML External Entities (XXE)</h4>
+					<p>Many older or poorly configured XML processors evaluate external entity references within XML documents. 
+						External entities can be used to disclose internal files using the file URI handler, internal file shares, 
+						internal port scanning, remote code execution, and denial of service attacks.</p>
+				</section>
+				<section>
+					<h4>A5:2017-Broken Access Control</h4> 
+					<p>Restrictions on what authenticated users are allowed to do are often not properly enforced. Attackers can 
+						exploit these flaws to access unauthorized functionality and/or data, such as access other users’ accounts, 
+						view sensitive files, modify other users’ data, change access rights, etc.</p>
+				</section>
+				<section>
+					<h4>xA6:2017-Security Misconfiguration</h4>
+					<p>misconfiguration is the most commonly seen issue. This is commonly a result of insecure default configurations, 
+						incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages 
+						containing sensitive information. Not only must all operating systems, frameworks, libraries, and applications 
+						be securely configured, but they must be patched/upgraded in a timely fashion.</p>
+				</section>
+				<section>
+					<h4>A7:2017-Cross-Site Scripting XSS</h4>
+					<p>XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or 
+						escaping, or updates an existing web page with user-supplied data using a browser API that can create HTML or 
+						JavaScript. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, 
+						deface web sites, or redirect the user to malicious sites.</p>
+				</section>
+				<section>
+					<h4>A8:2017-Insecure Deserialization</h4>
+					<p>Insecure deserialization often leads to remote code execution. Even if deserialization flaws do not result in 
+						remote code execution, they can be used to perform attacks, including replay attacks, injection attacks, and 
+						privilege escalation attacks.</p>
+				</section>
+				<section>
+					<h4>A9:2017-Using Components with Known Vulnerabilities</h4>
+					<p>Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application. 
+						If a vulnerable component is exploited, such an attack can facilitate serious data loss or server takeover. Applications 
+						and APIs using components with known vulnerabilities may undermine application defenses and enable various attacks and impacts.
+					</p>
+				</section>
+				<section>
+					<h4>A10:2017-Insufficient Logging & Monitoring</h4>
+					<p>Insufficient logging and monitoring, coupled with missing or ineffective integration with incident response, 
+						allows attackers to further attack systems, maintain persistence, pivot to more systems, and tamper, extract, 
+						or destroy data. Most breach studies show time to detect a breach is over 200 days, typically detected by external 
+						parties rather than internal processes or monitoring.</p>
+				</section>
+				<section>
+					<h2>OWASP Juice Shop</h2><p>OWASP Juice Shop is probably the most modern and sophisticated insecure web application! 
+					It can be used in security trainings, awareness demos, CTFs and as a guinea pig for 
+					security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top 
+					Ten along with many other security flaws found in real-world applications!</p>
+				</section>
+				<section><h2>OWASP ZAP</h2><p>A Free and Open Source Web Scanner.</p></section>
+				<section><img src="images/ZAP_Download.png"></section>
+				<section><img src="images/Zap_Startup.png"></section>
+				<section><img src="images/Metasploitable2_sites.png"></section>
+				<section><img src="images/Mutillidae.png"></section>
+				<section data-background="images/Mutillidae_beging_scan.png" data-background-size="contain"></section>
+				<section data-background="images/Zap_Spider.png" data-background-size="contain"></section>
+				<section data-background="images/Zap_Alerts.png" data-background-size="contain"></section>
+				<section data-background="images/Zap_directory_traversal.png" data-background-size="contain"></section>
+				<section data-background="images/Zap_multillidae_passwd.png" data-background-size="contain"></section>
+				<section data-background="images/Zap_details.png" data-background-size="contain"></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
