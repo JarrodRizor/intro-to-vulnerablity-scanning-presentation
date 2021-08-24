@@ -19,16 +19,23 @@
 				<section><h1>Intro To Vulnerability Scanning</h1><h2>by Jarrod Rizor</h2></section>
 				<section><h2>What is Vulnerability Scanning?</h2><p>Vulnerability scanning is an inspection of the potential points of exploit on a computer or network to identify security holes. </p></section>
 				<section><h2>In Comes Nessus</h2></section>
-				<section><h2>What is Nessus?</h2><p>Nessus is a proprietary vulnerability scanner developed by Tenable, Inc. (NASDAQ: TENB) </p></section>
+				<section><h2>What is Nessus?</h2><p>Nessus is a proprietary vulnerability scanner developed by Tenable, Inc. (NASDAQ: TENB) </p><img src="images/Nessus_Scanoverview.png"></section>
 				<section><h2>The Nessus Family.</h2><p>Nessus Essentials, Nessus Professional, Tenable.io <a href="https://www.tenable.com/products/nessus" target="_blank">Nessus Products</a></p></section>
 				<section data-background="images/Nessus_family.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_pricing.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_pricing2.png" data-background-size="contain"></section>
 				<section><h2>Other Scanners</h2><p>OpenVAS and Nexpose</p></section>
 				<section data-background="images/rapid7.png" data-background-size="contain"></section>
+				<section data-background="images/Nexpose.jpg" data-background-size="contain"></section>
 				<section data-background="images/Openvas.png" data-background-size="contain"></section>
+				<section data-background="images/OpenVas_Dashboard.png" data-background-size="contain"></section>
 				<section><h2>Setup Nessus Essentials</h2></section>
 				<section><p>Navigating to <a href=" https://www.tenable.com/products/nessus/nessus-essentials">Nessus Register, we can register for an account</a></p><img src="images/Nessus_Activation.png"></section>
 				<section><p>We will then download the Nessus-#.##.#-debian6_amd64.deb file.</p><p>Then run the command sudo dpkg -i package_file.deb</p><img src="images/Nessus_install.png"></section>
 				<section><p>Start Nessus by running sudo /bin/systemctl start nessusd.service. Then Navigate to <a href="https://localhost:8834">https://localhost:8834</a></p></section>
+				<section><img src="images/Nessus_Register.png"></section>
+				<section><img src="images/Nessus_init.png"></section>
+				<section><img src="images/Nessus_Login.png"></section>
 				<section data-background="images/Nessus_Homepage.png" data-background-size="contain"></section>
 				<section data-background="images/Nessus_Scantemplates.png" data-background-size="contain"></section>
 				<section data-background="images/Nessus_Metaspoitable_NewScan.png" data-background-size="contain"></section>
@@ -148,7 +155,19 @@
 				<section data-background="images/Zap_Alerts.png" data-background-size="contain"></section>
 				<section data-background="images/Zap_directory_traversal.png" data-background-size="contain"></section>
 				<section data-background="images/Zap_multillidae_passwd.png" data-background-size="contain"></section>
+				<section>
+					<h2>Modes</h2>
+					<p>Standard Mode: This allows you to do anything to your site.<br />
+					Safe Mode: This mode turns off all the dangerous features while scanning. This mode avoids user to do anything that is possible.<br />
+					Protected Mode: Allows user to scan the site in particular scope. Harmful actions can only be performed in the sites mentioned in the scope.<br />
+					ATTACK Mode: New nodes are Actively Scanned when founded.</p>
+				</section>
 				<section data-background="images/Zap_details.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_WebApplicationSetup.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_WebApplicationScan.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_WebApplicationScan2.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_path_vuln.png" data-background-size="contain"></section>
+				<section data-background="images/Nessus_passwd.png" data-background-size="contain"></section>
 			</div>
 		</div>
 
